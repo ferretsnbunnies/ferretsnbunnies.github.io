@@ -1,0 +1,173 @@
+html, body {
+    
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 2% 0 0 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    width: 100%;
+    height:100%;
+  }
+
+h1 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin: 10%;
+  }
+
+h2 {
+    
+    color: rgb(0, 0, 0);
+    margin: 10%;
+  }
+
+h3 {
+    padding: 5px;
+    color: rgb(0, 0, 0);
+    margin: 10px;
+  }
+
+p {
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+.small-img {
+      width: 10%;
+      margin-left: 45%;
+  }
+
+a:link {
+    color: orange;
+  }
+
+a:visited {
+    color: rgb(0, 0, 0);
+  }
+
+blockquote{
+      color: ivory;
+  }
+
+  list-style{
+      color: ivory;
+  }
+
+nav{
+  background-color: rgb(255, 255, 255);
+  font-weight: bold;
+  position: fixed;
+  width: 100%;
+  top:0;
+}
+
+  nav li {
+    display: inline-block;
+    padding: 0px 24px;
+  }
+
+  nav li a{
+  color:rgb(255, 255, 255);
+  text-decoration: none;
+  }
+
+  nav li a:hover{
+  color:darkgoldenrod;
+  text-decoration: none;
+  }
+
+  nav p{
+  float: left;
+  padding-top: 8px;
+  }
+
+  nav img{
+  float: left;
+  width: 42px;
+  padding:12px 24px;
+  }
+
+.big-img {
+  width: 100%;
+}
+
+footer h3{
+  padding: 0%;
+  text-shadow: honeydew;
+  text-align: left;
+}
+
+footer{
+  background-color: black ;
+  padding: 10px;
+  color: white ;
+}
+
+footer p{
+  text-align: left;
+}
+
+.mainTitle{
+  text-align: left;
+  font-size: 16px;
+  color: black; 
+  height: 100%;
+  float: left;
+  padding-top: 23px;
+}
+
+.contactForm{
+  padding:37px;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  padding-top: 10px;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  background-color: black;
+}
+
+.container {
+  position: relative;
+}
+table {
+  width: 100%;
+  border: 1px solid;
+  margin-bottom: 10px;
+}
+
+nav a {
+  padding: 8px;
+  transition-property: background-color;
+  transition-duration: 2s;
+}
+
+nav a:hover {
+  background-color: rgb(29, 210, 147);
+}
+
+@keyframes appear{
+  from {opacity: 0%;}
+  to {opacity: 100%;}
+}
+
+header img{
+  animation-duration: 2s;
+  animation-name: appear;
+}
+
