@@ -690,6 +690,10 @@ a.highlight:hover {
     color: var(--color-highlight2);
 }
 
+a.highlight--light:hover {
+    color: var(--color-highlight);
+}
+
 a {
     text-decoration: none;
     transition: all var(--global-trans-time) var(--global-trans-ease);
@@ -866,16 +870,21 @@ h6 {
     line-height: 1;
 }
 
+h2.smaller, h2 .smaller {
+    --scale: 2;
+    font-size: calc((var(--vw) + var(--font-size-main)) * var(--scale));
+}
+
 
 
 /* ----- OTHER STYLES */
 
-.thin {
-    font-weight: 300;
+.small {
+    font-size: 90%;
 }
 
-.thin.small {
-    font-size: 90%;
+.thin {
+    font-weight: 300;
 }
 
 .dark {
@@ -911,6 +920,22 @@ a .dark:hover, a.dark:hover, .dark a:hover {
     z-index: 5;
 }
 
+.opacity-0 {--opacity: 0%;}
+.opacity-10 {--opacity: 10%;}
+.opacity-20 {--opacity: 20%;}
+.opacity-30 {--opacity: 30%;}
+.opacity-40 {--opacity: 40%;}
+.opacity-50 {--opacity: 50%;}
+.opacity-60 {--opacity: 60%;}
+.opacity-70 {--opacity: 70%;}
+.opacity-80 {--opacity: 80%;}
+.opacity-90 {--opacity: 90%;}
+.opacity-100 {--opacity: 100%;}
+
+[class^="opacity-"] {
+    opacity: var(--opacity);
+}
+
 
 
 
@@ -932,6 +957,10 @@ a .dark:hover, a.dark:hover, .dark a:hover {
 .smalltitle--small {
     --scale: 0.6;
     letter-spacing: 1vw;
+}
+
+.highlight {
+    color: var(--color1);
 }
 
 
@@ -1214,7 +1243,7 @@ a .dark:hover, a.dark:hover, .dark a:hover {
 
 
 
-/* ------------------------- INTRO -------------------------
+/* ------------------------- INTRO VIDEO -------------------------
 ------------------------------------------------------------ */
 
 .introvideo {
@@ -1278,12 +1307,48 @@ a .dark:hover, a.dark:hover, .dark a:hover {
 
 
 
+/* ------------------------- SOCIALS -------------------------
+------------------------------------------------------------ */
+
+.socials {
+    position: relative;
+    z-index: 20;
+}
+
+.socials__subtitle {
+
+}
+
+@media all and (max-width: 1000px) {
+    .list-socials {
+        gap: var(--gap-small);
+    }
+
+    .socials__subtitle {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
 /* ------------------------- TEAM -------------------------
 ------------------------------------------------------------ */
 
 .team-section.background.solid {
     border-radius: var(--border-radius-big) var(--border-radius-big) 0 0;
-    box-shadow: 0px -20px 400px var(--nb0);
+}
+
+.background.box-shadow {
+    box-shadow: 0 0 100vh var(--nb0);
+    position: relative;
+    z-index: 10;
 }
 
 .list-team {
@@ -1358,4 +1423,115 @@ a .dark:hover, a.dark:hover, .dark a:hover {
 .team-member__subtitle {
     grid-area: subtitle;
     text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/* ------------------------- COMMENTS -------------------------
+------------------------------------------------------------ */
+
+.comments-section {
+    /* position: relative; */
+}
+
+ul.unset.list-comments, .list-comments {
+    column-count: 2;
+    padding: 0 var(--paddw) !important;
+    gap: var(--paddw);
+    --paddw: calc(0.5 * var(--global-margin-width));
+}
+
+@media all and (max-width: 900px) {
+    ul.unset.list-comments, .list-comments {
+        column-count: 1;
+    }
+}
+
+.list-comments > * {
+    break-inside: avoid;
+}
+
+.list-comments > *:not(:first-child) {
+    padding-top: clamp(var(--gap-small), 300px, 9vh);
+}
+
+.item-comments__header {
+    display: grid;
+    grid-template:
+        ".   . . .    . .    ." var(--gutter)
+        "img . . name name name ." auto
+        "img . . date . rate ." auto
+        ".   . . .    . .    ." var(--gutter)
+        / auto var(--gutter) var(--paddw) 1fr var(--gutter) auto var(--paddw);
+    --paddw: calc(4 * var(--gutter));
+    margin: 0 auto var(--gutter);
+
+    position: relative;
+}
+
+.item-comments__header::before {
+    display: block;
+    content: '';
+    grid-area: 1/3/-1/-1;
+    background: var(--nb0);
+    border-radius: var(--border-radius-small);
+}
+
+.item-comments__img {
+    grid-area: img;
+    width: var(--sq);
+    height: var(--sq);
+    --sq: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.item-comments__img > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.item-comments__name {
+    grid-area: name;
+    align-self: end;
+}
+
+.item-comments__date {
+    grid-area: date;
+    align-self: start;
+}
+
+.item-comments__rate {
+    grid-area: rate;
+    align-self: start;
+}
+
+.item-comments__text {
+    grid-area: text;
+}
+
+
+
+
+
+/* ----- RATE -----*/
+
+.rate {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: var(--gutter);
+}
+
+.rate__empty {
+    opacity: .4;
+}
+
+.rate__fill {
 }
