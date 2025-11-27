@@ -75,7 +75,7 @@ html:not(.theme-light) {
 
     --border-radius: var(--gap2);
     --border-radius-small: var(--gap1);
-    --border-radius-big: var(--gap7);
+    --border-radius-big: var(--gap3);
 
     --border-line-width: 2px;
 
@@ -1280,6 +1280,11 @@ a .dark:hover, a.dark:hover, .dark a:hover {
 
 /* ------------------------- TEAM -------------------------
 ------------------------------------------------------------ */
+
+.team-section.background.solid {
+    border-radius: var(--border-radius-big) var(--border-radius-big) 0 0;
+    box-shadow: 0px -20px 400px var(--nb0);
+}
 
 .list-team {
     display: grid;
