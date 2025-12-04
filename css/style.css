@@ -306,7 +306,7 @@ button.unset {
 }
 
 .bold {
-    font-weight: 550 !important;
+    font-weight: 600 !important;
 }
 
 .text-indent {
@@ -1540,12 +1540,12 @@ ul.unset.list-comments, .list-comments {
 /* ----- RATE -----*/
 
 .rate {
-    display: flex;
-    flex-flow: row nowrap;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: var(--gutter);
 }
 
-.rate__empty::after, .rate__fill::after, .rate__halfFill::after {
+/* .rate__empty::after, .rate__fill::after, .rate__halfFill::after {
     display: block;
     content: '';
     width: var(--sq);
@@ -1553,21 +1553,48 @@ ul.unset.list-comments, .list-comments {
     --sq: 20px;
     background: url(../images/icons/wtf.svg);
 
-    /* mask-image: url(../images/icons/star-half.svg);
+    mask-image: url(../images/icons/star-half.svg);
     mask-size: cover;
     mask-repeat: no-repeat;
     mask-position: center;
     mask-type: luminance; */
 
     /* mask-type: alpha; */
-    /* mask: url(../images/icons/wtf.svg) 50% 50% / cover; */
-    color: red;
-    stroke:red;
+    /* mask: url(../images/icons/wtf.svg) 50% 50% / cover;
+} */
+
+.rate__icon svg, .rate__icon object {
+    width: var(--sq);
+    height: var(--sq);
+    --sq: 14px;
 }
 
-.rate__empty {
-    opacity: .4;
+.rate__icon path {
+    fill: none;
+    stroke: currentColor !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+}
+
+.rate__icon.rate__empty path {
+    fill: none !important;
+    stroke-width: 10px !important;
+}
+
+.rate__icon.rate__fill path, .rate__icon.rate__halfFill path {
+    fill: currentColor !important;
+    stroke-width: 0 !important;
 }
 
 .rate__fill {
+    order: 1;
+}
+
+.rate__halfFill {
+    order: 2;
+}
+
+.rate__empty {
+    order: 3;
+    opacity: .4;
 }
