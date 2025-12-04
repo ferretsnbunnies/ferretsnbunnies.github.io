@@ -1598,3 +1598,112 @@ ul.unset.list-comments, .list-comments {
     order: 3;
     opacity: .4;
 }
+
+
+
+
+
+
+
+
+
+/* ------------------------- NEWS SECTION -------------------------
+------------------------------------------------------------ */
+
+.background.solid.news-section {
+    background: var(--color3);
+}
+
+.article-news {
+    display: grid;
+    grid-gap: var(--gutter);
+}
+
+.news__list {
+    display: grid;
+    gap: var(--gap);
+}
+
+.article-news--video {
+    grid-template:
+        "video . title" auto
+        "video . .   " var(--padd)
+        "video . text" 1fr
+        ".     . text" auto
+        / auto var(--padd) 1fr;
+    --padd: var(--gutter);
+    padding: 0 var(--paddw);
+    --paddw: calc(0.5 * var(--global-margin-width));
+}
+
+.article-news__title {
+    grid-area: title;
+}
+
+.article-news__title h3 {
+    padding: 0 !important;
+}
+
+.article-news__subtitle {
+    grid-area: subtitle;
+}
+
+.article-news__text {
+    grid-area: text;
+}
+
+.article-news__video {
+    grid-area: video;
+}
+
+.article-news__video iframe {
+    display: block;
+    width: var(--widthvideo);
+    height: calc(var(--widthvideo) / 1920 * 1080);
+    --widthvideo: 35vw;
+    border-radius: var(--border-radius-small);
+}
+
+@media all and (max-width: 1200px) {
+    .article-news__video iframe {
+        --widthvideo: 50vw;
+    }
+}
+
+@media all and (max-width: 850px) {
+    
+    .article-news--video {
+        grid-template:
+            "title" auto
+            "." var(--padd)
+            "video" auto
+            "text" auto
+            / 1fr;
+        --padd: var(--gap-small);
+        --paddw: 0;
+    }
+
+    .article-news__video iframe {
+        --widthvideo: calc(100vw - 1 * var(--gap-mainblock-w));
+
+        
+    }
+}
+
+.article-news--text {
+    display: flex;
+    flex-flow: column wrap;
+    gap: var(--gutter);
+}
+
+.article-news__photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-small);
+}
+
+.article-news__photo {
+    display: block;
+    width: 100%;
+    max-height: 50vh;
+}
