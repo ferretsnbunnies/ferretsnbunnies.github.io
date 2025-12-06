@@ -1419,13 +1419,15 @@ a .dark:hover, a.dark:hover, .dark a:hover {
     grid-area: img;
     width: 100%;
     height: var(--img-height);
+    border-radius: var(--border-radius-small);
+    overflow: hidden;
+    background: white;
 }
 
 .team-member__img > img {
     display: block;
     width: 100%;
     height: 100%;
-    border-radius: var(--border-radius-small);
     box-shadow: 0 0 25px var(--nb00);
     filter: grayscale(100%);
     transition: all .3s ease;
