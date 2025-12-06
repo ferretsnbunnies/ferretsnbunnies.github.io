@@ -1337,6 +1337,10 @@ a .dark:hover, a.dark:hover, .dark a:hover {
     z-index: 20;
 }
 
+.socials--small .roundlink {
+    --sq: 50px;
+}
+
 .socials__subtitle {
 
 }
@@ -1967,4 +1971,49 @@ ul.unset.list-comments, .list-comments {
 
 .infos-cta__text {
     grid-area: text;
+}
+
+
+
+
+
+
+
+
+
+/* ------------------------- FOOTER -------------------------
+------------------------------------------------------------ */
+
+.footer {
+    display: grid;
+    gap: var(--gutter);
+    grid-template:
+        "title . socials" auto
+        "subtitle subtitle ." auto
+        "text text text" auto
+        / 2fr var(--gap) 1fr;
+}
+
+.footer__title {
+    grid-area: title;
+    align-self: end;
+}
+
+.footer__subtitle {
+    grid-area: subtitle;
+    align-self: end;
+}
+
+.footer__text {
+    grid-area: text;
+}
+
+.footer__socials {
+    display: flex;
+    grid-area: socials;
+    justify-content: end;
+    align-items: end;
+}
+
+.footer__socials .socials__list {
 }
