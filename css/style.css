@@ -6,6 +6,7 @@ html:not(.theme-light) {
     --nb01: #FFFFFF05;
 
     --background: #3c596f;
+    --background2: #303341;
     /* --nb0: #3908ff; */
     --nb0: #181a27;
     --nb1: #FFFFFF;
@@ -1026,6 +1027,10 @@ a .dark:hover, a.dark:hover, .dark a:hover {
   border-radius: 0;
 }
 
+.background--ctasection.solid {
+    --background: var(--background2);
+}
+
 .solid.background--dark, .background--dark {
   background: var(--nb0);
 }
@@ -1250,6 +1255,10 @@ a .dark:hover, a.dark:hover, .dark a:hover {
 .intro__title {
   grid-area: title;
   align-self: end;
+}
+
+.intro__title .small {
+    font-size: 50%;
 }
 
 .intro__subtitle {
