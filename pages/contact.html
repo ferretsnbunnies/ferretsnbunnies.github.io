@@ -2,89 +2,472 @@
 <html>
 <meta charset="UTF-8">
 	<head>
-		<title>Ferrets N'Bunnies - contact</title>
+		<title>Ferrets N'Bunnies - Home</title>
 		<link rel= "stylesheet" href="../css/style.css">
-    </head>
+			<meta name="description" content="Ferrets N'Bunnies">
+			<meta name="keywords" content="videogame development website">
+			<meta name="author" content="Ferrets N'Bunnies">
 
-	<body>
-        <nav>
-            <img src ="../images/LogoFnB-vectorised.svg">
-            <div class='mainTitle'>Ferrets N'Bunnies</div>
-            <ul>
-                <li> <a href ="../index.html">Home</a></li>
-                <li><a href ="../pages/team.html">Team</a></li>
-                <li><a href ="../pages/contact.html">contact</a></li>
-            </ul>
-        </nav>
-        <header>
-            <div class="container">
-            <img src="../images/banner.png" class="big-img">
-            </div>
-        </header>
-        <p>INSERER ICI LE QR CODE DU JEU ET LE LIEN STEAM</p>
-        <table>
-            <tr>
-              <th>Nom</th>
-              <th>Prénom</th>
-              <th>e-mail</th>
-            </tr>
-            <tr>
-              <td>Pablo</td>
-              <td>Gangutia</td>
-              <td>@mail.be</td>
-            </tr>
-            <tr>
-              <td>Joey</td>
-              <td>Brynckman</td>
-              <td>@mail.be</td>
-            </tr>
-            <tr>
-              <td>Korydwen</td>
-              <td>Gloesener</td>
-              <td>@mail.be</td>
-            </tr>
-            <tr>
-              <td>Anaïs</td>
-              <td>Baële</td>
-              <td>@mail.be</td>
-            </tr>
-            <tr>
-              <td>Manon</td>
-              <td>Carrasco Sanchez</td>
-              <td>@mail.be</td>
-            </tr>
-            <tr>
-              <td>Emily-Yu</td>
-              <td>Sayez</td>
-              <td>@mail.be</td>
-            </tr>
-            <tr>
-              <td>Adrien</td>
-              <td>Delmarche</td>
-              <td>@mail.be</td>
-            </tr>
-            <tr>
-              <td>Baptiste</td>
-              <td>Dozin</td>
-              <td>@mail.be</td>
-            </tr>
-            <tr>
-              <td>Floppy</td>
-              <td>the ferret</td>
-              <td>Too famous to be contacted</td>
-            </tr>
-            <tr>
-              <td>Plume</td>
-              <td>the bunny</td>
-              <td>Too famous to be contacted</td>
-            </tr>
-          </table>
-        <footer>
-			<h3>contact us</h3>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Hand:wght@400..700&family=Kedebideri:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-            <p>we'd like to read your reviews
-            <br>
-            ferretsnbunnies@gmail.com</p>
-		</footer>
-    </body> 
+		<!-------------------- SCRIPT IMPORT -------------------->
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    	<script src="../js/head.js"></script>
+	</head>
+
+		
+
+	<div id="templates" class="display-none">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="iconTemplate"><rect fill="none"/><path d="M128,189.09l54.72,33.65a8.4,8.4,0,0,0,12.52-9.17l-14.88-62.79,48.7-42A8.46,8.46,0,0,0,224.27,94L160.36,88.8,135.74,29.2a8.36,8.36,0,0,0-15.48,0L95.64,88.8,31.73,94a8.46,8.46,0,0,0-4.79,14.83l48.7,42L60.76,213.57a8.4,8.4,0,0,0,12.52,9.17Z"/></svg>
+
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="iconHalfTemplate"><rect fill="none"/><path d="M239.18,97.26A16.38,16.38,0,0,0,224.92,86l-59-4.76L143.14,26.15a16.36,16.36,0,0,0-30.27,0L90.11,81.23,31.08,86a16.46,16.46,0,0,0-9.37,28.86l45,38.83L53,211.75a16.4,16.4,0,0,0,24.5,17.82L128,198.49l50.53,31.08A16.4,16.4,0,0,0,203,211.75l-13.76-58.07,45-38.83A16.43,16.43,0,0,0,239.18,97.26Zm-15.34,5.47-48.7,42a8,8,0,0,0-2.56,7.91l14.88,62.8a.37.37,0,0,1-.17.48c-.18.14-.23.11-.38,0l-54.72-33.65A8,8,0,0,0,128,181.1V32c.24,0,.27.08.35.26L153,91.86a8,8,0,0,0,6.75,4.92l63.91,5.16c.16,0,.25,0,.34.29S224,102.63,223.84,102.73Z"/></svg>
+	</div>
+
+	<body class="body-contact">
+		<nav class="mainnav">
+				<div class="mainnav__logo flex-row justify-center height-100">
+					<svg xmlns="http://www.w3.org/2000/svg" data-name="Calque 2" viewBox="0 0 1988.74 2097.76">
+						<path class="cls-1" d="M1969.12,1851.11c-35.15-55.62-107.82-69.45-156.94-56.15-6.16,1.67-11.14,3.54-14.54,4.94-5.55,2.76-8.45,5.33-9.43,4.42-1.22-1.13,1.91-6.31,5.66-13.82,3.24-6.49,5.74-13.35,8.74-19.95,79.42-174.59,74.49-319.1,74.49-319.1-2.78-81.6-25.44-141.34-50.24-198.39-114.85-264.22-340.67-405.85-360.39-417.87-88.36-53.87-226.44-138.05-400.41-123.71-126.16,10.4-281.84,73.48-283.28,68.55-.19-.66,2.57-1.86,12.75-9.83,7.99-6.25,13.34-11.03,15.73-13.11,21.36-18.58,102.37-79.11,145.2-123.14,44.02-45.24,64.29-90.07,95.24-158.48,18-39.79,28.68-76.03,50.06-148.5,21.97-74.5,21.54-88.04,14.68-99.41-22.86-37.91-104.77-31.05-154.5-16.6-69.02,20.05-137.74,70.26-141.71,63.94-.31-.49-.45-3.18-.71-8.56-.23-4.68-.21-8.14-.21-8.35.02-3.83-2.95-69.99-22.08-131.12-13.64-43.59-37.06-118.4-83.18-126.21-44.35-7.51-86.68,50.81-104.16,74.9-41.93,57.76-51.51,117.7-60.73,179.76-10.19,68.56-2.41,78.83-12.88,201.43-9.74,114.02-19.87,145.04-43.25,157.15-15.17,7.86-21.09-2.56-91.83,5.46-39.92,4.53-60.55,11.25-66.9,13.4-30.49,10.32-51.38,24.02-61.56,30.69-83.49,54.73-165.14,173.09-165.35,173.4h0c-23.11,40.62-41.32,75.05-54.2,100.1C4.94,1030.79-.18,1054.47,0,1078.85c.34,44.25,18.12,76.91,24.29,87.41,28.99,49.27,74.92,68.65,111.06,83.9,63.28,26.69,133.36,29.96,153.58,25.18,0,0,8.57-2.02,9.18-.38.81,2.16-13.89,6.09-25.01,19.38-7.57,9.05-5.03,12.34-14.35,26.22-7.57,11.26-11.34,12.21-17.67,20.9-9.46,12.99-12.15,26.1-14.35,36.86-15.24,74.41,5.52,150.12,5.52,150.12,25.61,93.37,84.66,201.86,120.73,248.17,4.42,5.68,15.45,19.35,20.24,40.29,3.16,13.8,2.83,27.38-5.15,64.99-7.55,35.59-11.33,53.38-18.4,71.83-18.99,49.54-39.75,90.07-39.75,90.07-2.89,5.97-9.58,18.47-6.63,33.06,1.98,9.79,7.49,16.81,11.41,20.9h91.42c-3.34-6.18-7.66-15.82-9.48-28.17-2.51-17.09,1.1-30.16,6.53-50.07,16.6-60.89,13.65-52,16.01-59.29,15.65-48.29,20.13-51.55,33.13-91.21,8.89-27.15,14.03-47.71,21.8-78.75,9.99-39.96,15.84-69.15,18.5-82.01,0,0,16.43-79.23,44.72-167.6,24.62-76.91,134.67-267.14,295.47-277.63,15.98-1.04,55.99-3.21,100.3,15.58,60.31,25.58,92.09,74.51,196.18,150.31,12.43,9.05,22.62,16.1,37.65,18.28,29.55,4.28,56.34-13.39,125.68-77.19,23.75-21.85,53.58-50.12,87.32-84.18-.17-8.34.37-33.72,17.76-57.1,5.05-6.79,20.18-27.13,46.65-31.35,23.61-3.76,44.04,7.27,54.38,15.68,17.09,13.89,24.71,25.37,24.71,25.37,3.47,5.23,5.27,9.14,10.35,12.26,7.23,4.43,13.12,2.34,23.19,3.71,8.76,1.19,13.95,4.08,23.74,8.84,25.23,12.26,1.29-1.8,82.13,36.82,71.08,33.96,76.38,38.53,87.23,39.34,1.69.13,6.79.41,10.95,4.08,7.67,6.78,9.18,22.53,4.15,34.4-5.69,13.41-19.44,21.18-25.03,31.54-2.53,4.69-4.62,9.7-4.62,9.7-1.37,3.29-2.22,5.79-2.3,6-10.46,28.29-59.8,44.52-74.75,49.71-38.95,13.53-77.7,31.37-99.65,44.47-50.24,29.96-76.79,73.35-88.06,91.78-1.81,2.96-3.68,6.14-5.62,9.89-16.67,32.23-31.22,75.58-39.37,168.26-6.01,68.37-5.15,138.54,3.17,212.54,1.71,15.21,3.44,27.77,4.69,36.34,14.65,18.76,27.6,23.73,36.71,24.8,8.68,1.02,39.23,1.49,48.22,2,1.38.08,4.61.3,7.59,2.52,2.3,1.71,3.59,3.97,4.32,5.65,171.43-2.68,296.29-5.05,322.52-5.33,5.75-.06,21.55-.18,42.05-4.36,13.17-2.69,23.03-5.98,25.23-6.77,32.47-11.55,62.12-61.77,67.24-112.42,1.47-14.54,5.57-55.12-18.4-93.06ZM385.51,957.23c-1.24,1.5-28.49,33.39-58.34,23.18-26.18-8.96-33.67-43.24-32.94-63.09.23-6.16.77-20.89,10.86-33.58,14.4-18.1,37.57-18.64,47.66-18.87,12.09-.28,28.97-.67,40.12,10.64,18.1,18.36,12.04,58.33-7.36,81.71Z"/>
+						<path class="cls-1" d="M1610.07,1375.48c12.58.09,18.84-17.37,19.14-18.24.85-2.48,4.35-12.67-.74-19.19-3.03-3.88-7.64-4.6-16.01-5.89-7.36-1.14-11.03-1.71-14.54.38-6.41,3.81-7.62,13.48-7.18,19.19.81,10.36,8.37,23.68,19.32,23.75Z"/>
+						<path class="cls-1" d="M615.83,1954.87c-14.84-9.46-31.69-9.3-43.62-7.7l-60.87,65.84c5.12,3.25,10.95,7.76,16.56,13.97,16.38,18.13,20.45,39.3,21.67,49.17l.55,17.53h144.93c-17.84-23.55-29.24-44.64-36.44-59.86-18.95-40.07-20.9-65.01-42.79-78.96Z"/>
+						<path class="cls-1" d="M1080.59,1943.78s-38.95-85.71-177.71-161.17c-2.33-1.27-6.75-3.42-11.04-1.9-7.79,2.75-9.99,15.73-10.67,19.38-1.59,8.44-14.99,36.18-41.8,91.67-1.13,2.35.04-.13-43.22,78.97-11.52,21.06-22.25,41.34-14.97,60.05,3.27,8.39,8.95,13.34,12.02,15.96,27.9,23.75,64.93.7,87.6,22.8,3.22,3.14,8.11,9.1,11.04,20.14h245.13l-31.29-61.95c-5.94-37.02-16.62-65.3-25.1-83.96Z"/>
+						<path class="cls-1" d="M1253.92,1931.78c-24.69-3.59-37.03-5.39-44.44.29-7.7,5.89-6.05,14.22-8.01,60.71-1.68,39.81-3.7,52.82,5.52,61,3.6,3.19,10.04,4.41,22.91,6.84,23.06,4.36,36.32,1.36,44.17,10.99,2.23,2.73,3.31,5.6,3.86,7.53h95.51l-86.68-140.52c-7.98-2.18-19.22-4.86-32.85-6.84Z"/>
+					</svg>
+				</div>
+				<div class="mainnav__title title-mainnav flex-row justify-start">
+					<span class="title-mainnav__text smalltitle">
+						Shards of Eukria
+					</span>
+				</div>
+				<ul class="mainnav__links links-mainnav flex-row unset lowercase">
+					<li><a class="highlight links-mainnav__link italic" href ="../index.html">Home</a></li>
+					<li><span class="highlight highlight--underline links-mainnav__link" href ="pages/contact.html">Contact</span></li>
+				</ul>
+		</nav>
+
+
+
+		<div class="mainpage">
+
+
+
+
+
+			<!----------------------------------- SECTION PORTFOLIOS -----------------------------------
+		    -------------------------------------------------------------------------------------->
+			<div class="portfolios-section section mainbody-section">
+				<div class="container">
+					<article class="portfolios">
+						<h2 class="display-none portfolios__title mainblock">Contact us</h2>
+						<ul class="portfolios__memberslist memberslist-portfolios unset">
+
+							<!-------------- PORTFOLIO ---------------->
+							<li>
+								<article class="portfolio background mainblock">
+									<div class="portfolio__title title-portfolio">
+										<h3 class="title-portfolio__name">Adrien Delmarche</h3>
+										<div class="title-portfolio__role highlight--light">3D Artist + Animator</div>
+									</div>
+									<div class="portfolio__image image-portfolio"><img src="../images/team/adrien.png" alt="" class="image-portfolio__img"></div>
+
+									<ul class="unset portfolio__links links-portfolio">
+										<li>
+											<a class="links-portfolio__link link-portfolio" href="https://www.linkedin.com/in/adrien-delmarche-4ab923220/">
+												<div class="link-portfolio__icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.12a24,24,0,0,0-14.49,16.4C19.08,79.5,16,97.74,16,128s3.08,48.5,5.67,58.48a24,24,0,0,0,14.49,16.41C69,215.56,120.4,216,127.34,216h1.32c6.94,0,58.37-.44,91.18-13.11a24,24,0,0,0,14.49-16.41c2.59-10,5.67-28.22,5.67-58.48S236.92,79.5,234.33,69.52Zm-73.74,65-40,28A8,8,0,0,1,108,156V100a8,8,0,0,1,12.59-6.55l40,28a8,8,0,0,1,0,13.1Z"/></svg>
+												</div>
+
+												<span class="link-portfolio__title">LinkedIn</span>
+											</a>
+										</li>
+										<li>
+											<a class="links-portfolio__link link-portfolio" href="https://www.artstation.com/adrien_delmarche">
+												<div class="link-portfolio__icon">
+													<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+													<path d="M0 23.63l2.703 4.672c0.552 1.094 1.667 1.781 2.885 1.781h17.943l-3.724-6.453zM32 23.661c0-0.641-0.193-1.245-0.516-1.75l-10.516-18.276c-0.557-1.057-1.656-1.719-2.854-1.719h-5.557l16.24 28.135 2.563-4.432c0.5-0.849 0.641-1.224 0.641-1.958zM17.161 19.047l-7.255-12.568-7.26 12.568z"/>
+													</svg>
+												</div>
+
+												<span class="link-portfolio__title">Artstation</span>
+											</a>
+										</li>
+										<li>
+											<a class="links-portfolio__link link-portfolio" href="mailto:adriendelmarche@gmail.com">
+												<div class="link-portfolio__icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M231.4,44.34s0,.1,0,.15l-58.2,191.94a15.88,15.88,0,0,1-14,11.51q-.69.06-1.38.06a15.86,15.86,0,0,1-14.42-9.15L107,164.15a4,4,0,0,1,.77-4.58l57.92-57.92a8,8,0,0,0-11.31-11.31L96.43,148.26a4,4,0,0,1-4.58.77L17.08,112.64a16,16,0,0,1,2.49-29.8l191.94-58.2.15,0A16,16,0,0,1,231.4,44.34Z"/></svg>
+												</div>
+
+												<span class="link-portfolio__title">Mail</span>
+											</a>
+										</li>
+									</ul>
+								</article>
+							</li>
+
+							
+
+
+
+
+							<!-------------- PORTFOLIO ---------------->
+							<li>
+								<article class="portfolio background mainblock">
+									<div class="portfolio__title title-portfolio">
+										<h3 class="title-portfolio__name">Anaïs Baële</h3>
+										<div class="title-portfolio__role highlight--light">2D Artist + Character Artist</div>
+									</div>
+									<div class="portfolio__image image-portfolio"><img src="../images/team/anais.png" alt="" class="image-portfolio__img"></div>
+
+									<ul class="unset portfolio__links links-portfolio">
+										<li>
+											<a class="links-portfolio__link link-portfolio" href="https://www.linkedin.com/in/anaïs-baële-b40242291">
+												<div class="link-portfolio__icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.12a24,24,0,0,0-14.49,16.4C19.08,79.5,16,97.74,16,128s3.08,48.5,5.67,58.48a24,24,0,0,0,14.49,16.41C69,215.56,120.4,216,127.34,216h1.32c6.94,0,58.37-.44,91.18-13.11a24,24,0,0,0,14.49-16.41c2.59-10,5.67-28.22,5.67-58.48S236.92,79.5,234.33,69.52Zm-73.74,65-40,28A8,8,0,0,1,108,156V100a8,8,0,0,1,12.59-6.55l40,28a8,8,0,0,1,0,13.1Z"/></svg>
+												</div>
+
+												<span class="link-portfolio__title">LinkedIn</span>
+											</a>
+										</li>
+										<li>
+											<a class="links-portfolio__link link-portfolio" href="https://www.artstation.com/user-6138548/albums/8121315">
+												<div class="link-portfolio__icon">
+													<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+													<path d="M0 23.63l2.703 4.672c0.552 1.094 1.667 1.781 2.885 1.781h17.943l-3.724-6.453zM32 23.661c0-0.641-0.193-1.245-0.516-1.75l-10.516-18.276c-0.557-1.057-1.656-1.719-2.854-1.719h-5.557l16.24 28.135 2.563-4.432c0.5-0.849 0.641-1.224 0.641-1.958zM17.161 19.047l-7.255-12.568-7.26 12.568z"/>
+													</svg>
+												</div>
+
+												<span class="link-portfolio__title">Artstation</span>
+											</a>
+										</li>
+									</ul>
+								</article>
+							</li>
+
+							
+
+
+
+
+							<!-------------- PORTFOLIO ---------------->
+							<li>
+								<article class="portfolio background mainblock">
+									<div class="portfolio__title title-portfolio">
+										<h3 class="title-portfolio__name">Emily-Yu Sayez</h3>
+										<div class="title-portfolio__role highlight--light">Tech Artist + Sound Designer</div>
+									</div>
+									<div class="portfolio__image image-portfolio"><img src="../images/team/em.png" alt="" class="image-portfolio__img"></div>
+
+									<ul class="unset portfolio__links links-portfolio">
+										<li>
+											<a class="links-portfolio__link link-portfolio" href="https://www.linkedin.com/in/emily-yu-sayez-7568b1295/">
+												<div class="link-portfolio__icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.12a24,24,0,0,0-14.49,16.4C19.08,79.5,16,97.74,16,128s3.08,48.5,5.67,58.48a24,24,0,0,0,14.49,16.41C69,215.56,120.4,216,127.34,216h1.32c6.94,0,58.37-.44,91.18-13.11a24,24,0,0,0,14.49-16.41c2.59-10,5.67-28.22,5.67-58.48S236.92,79.5,234.33,69.52Zm-73.74,65-40,28A8,8,0,0,1,108,156V100a8,8,0,0,1,12.59-6.55l40,28a8,8,0,0,1,0,13.1Z"/></svg>
+												</div>
+
+												<span class="link-portfolio__title">LinkedIn</span>
+											</a>
+										</li>
+										<li>
+											<a class="links-portfolio__link link-portfolio" href="https://www.artstation.com/pscendres">
+												<div class="link-portfolio__icon">
+													<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+													<path d="M0 23.63l2.703 4.672c0.552 1.094 1.667 1.781 2.885 1.781h17.943l-3.724-6.453zM32 23.661c0-0.641-0.193-1.245-0.516-1.75l-10.516-18.276c-0.557-1.057-1.656-1.719-2.854-1.719h-5.557l16.24 28.135 2.563-4.432c0.5-0.849 0.641-1.224 0.641-1.958zM17.161 19.047l-7.255-12.568-7.26 12.568z"/>
+													</svg>
+												</div>
+
+												<span class="link-portfolio__title">Artstation</span>
+											</a>
+										</li>
+										<li>
+											<a class="links-portfolio__link link-portfolio" href="mailto:emilyyusayez@gmail.com">
+												<div class="link-portfolio__icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M231.4,44.34s0,.1,0,.15l-58.2,191.94a15.88,15.88,0,0,1-14,11.51q-.69.06-1.38.06a15.86,15.86,0,0,1-14.42-9.15L107,164.15a4,4,0,0,1,.77-4.58l57.92-57.92a8,8,0,0,0-11.31-11.31L96.43,148.26a4,4,0,0,1-4.58.77L17.08,112.64a16,16,0,0,1,2.49-29.8l191.94-58.2.15,0A16,16,0,0,1,231.4,44.34Z"/></svg>
+												</div>
+
+												<span class="link-portfolio__title">Mail</span>
+											</a>
+										</li>
+									</ul>
+								</article>
+							</li>
+
+							
+
+
+
+
+							<!-------------- PORTFOLIO ---------------->
+							<li>
+								<article class="portfolio background mainblock">
+									<div class="portfolio__title title-portfolio">
+										<h3 class="title-portfolio__name">Joey Brynckman</h3>
+										<div class="title-portfolio__role highlight--light">Programmer</div>
+									</div>
+									<div class="portfolio__image image-portfolio"><img src="../images/team/joey.png" alt="" class="image-portfolio__img"></div>
+
+									<ul class="unset portfolio__links links-portfolio">
+										<li>
+											<a class="links-portfolio__link link-portfolio" href="">
+												<div class="link-portfolio__icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.12a24,24,0,0,0-14.49,16.4C19.08,79.5,16,97.74,16,128s3.08,48.5,5.67,58.48a24,24,0,0,0,14.49,16.41C69,215.56,120.4,216,127.34,216h1.32c6.94,0,58.37-.44,91.18-13.11a24,24,0,0,0,14.49-16.41c2.59-10,5.67-28.22,5.67-58.48S236.92,79.5,234.33,69.52Zm-73.74,65-40,28A8,8,0,0,1,108,156V100a8,8,0,0,1,12.59-6.55l40,28a8,8,0,0,1,0,13.1Z"/></svg>
+												</div>
+
+												<span class="link-portfolio__title">LinkedIn</span>
+											</a>
+										</li>
+										<li>
+											<a class="links-portfolio__link link-portfolio" href="mailto:">
+												<div class="link-portfolio__icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M231.4,44.34s0,.1,0,.15l-58.2,191.94a15.88,15.88,0,0,1-14,11.51q-.69.06-1.38.06a15.86,15.86,0,0,1-14.42-9.15L107,164.15a4,4,0,0,1,.77-4.58l57.92-57.92a8,8,0,0,0-11.31-11.31L96.43,148.26a4,4,0,0,1-4.58.77L17.08,112.64a16,16,0,0,1,2.49-29.8l191.94-58.2.15,0A16,16,0,0,1,231.4,44.34Z"/></svg>
+												</div>
+
+												<span class="link-portfolio__title">Mail</span>
+											</a>
+										</li>
+									</ul>
+								</article>
+							</li>
+
+							
+
+
+
+
+							<!-------------- PORTFOLIO ---------------->
+							<li>
+								<article class="portfolio background mainblock">
+									<div class="portfolio__title title-portfolio">
+										<h3 class="title-portfolio__name">Korydwen Gloesener</h3>
+										<div class="title-portfolio__role highlight--light">UI Programmer + 3D Artist</div>
+									</div>
+									<div class="portfolio__image image-portfolio"><img src="../images/team/kory.png" alt="" class="image-portfolio__img"></div>
+
+									<ul class="unset portfolio__links links-portfolio">
+										<li>
+											<a class="links-portfolio__link link-portfolio" href="https://www.artstation.com/kory_gloesener">
+												<div class="link-portfolio__icon">
+													<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+													<path d="M0 23.63l2.703 4.672c0.552 1.094 1.667 1.781 2.885 1.781h17.943l-3.724-6.453zM32 23.661c0-0.641-0.193-1.245-0.516-1.75l-10.516-18.276c-0.557-1.057-1.656-1.719-2.854-1.719h-5.557l16.24 28.135 2.563-4.432c0.5-0.849 0.641-1.224 0.641-1.958zM17.161 19.047l-7.255-12.568-7.26 12.568z"/>
+													</svg>
+												</div>
+
+												<span class="link-portfolio__title">Artstation</span>
+											</a>
+										</li>
+										<li>
+											<a class="links-portfolio__link link-portfolio" href="mailto:kory.gloesener@gmail.com">
+												<div class="link-portfolio__icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M231.4,44.34s0,.1,0,.15l-58.2,191.94a15.88,15.88,0,0,1-14,11.51q-.69.06-1.38.06a15.86,15.86,0,0,1-14.42-9.15L107,164.15a4,4,0,0,1,.77-4.58l57.92-57.92a8,8,0,0,0-11.31-11.31L96.43,148.26a4,4,0,0,1-4.58.77L17.08,112.64a16,16,0,0,1,2.49-29.8l191.94-58.2.15,0A16,16,0,0,1,231.4,44.34Z"/></svg>
+												</div>
+
+												<span class="link-portfolio__title">Mail</span>
+											</a>
+										</li>
+									</ul>
+								</article>
+							</li>
+
+							
+
+
+
+
+							<!-------------- PORTFOLIO ---------------->
+							<li>
+								<article class="portfolio background mainblock">
+									<div class="portfolio__title title-portfolio">
+										<h3 class="title-portfolio__name">Manon Carrasco Sanchez</h3>
+										<div class="title-portfolio__role highlight--light">Environmental Atist</div>
+									</div>
+									<div class="portfolio__image image-portfolio"><img src="../images/team/manon.png" alt="" class="image-portfolio__img"></div>
+
+									<ul class="unset portfolio__links links-portfolio">
+										<li>
+											<a class="links-portfolio__link link-portfolio" href="linkedin.com/in/manon-carrasco-sanchez-8a12a61b9">
+												<div class="link-portfolio__icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.12a24,24,0,0,0-14.49,16.4C19.08,79.5,16,97.74,16,128s3.08,48.5,5.67,58.48a24,24,0,0,0,14.49,16.41C69,215.56,120.4,216,127.34,216h1.32c6.94,0,58.37-.44,91.18-13.11a24,24,0,0,0,14.49-16.41c2.59-10,5.67-28.22,5.67-58.48S236.92,79.5,234.33,69.52Zm-73.74,65-40,28A8,8,0,0,1,108,156V100a8,8,0,0,1,12.59-6.55l40,28a8,8,0,0,1,0,13.1Z"/></svg>
+												</div>
+
+												<span class="link-portfolio__title">LinkedIn</span>
+											</a>
+										</li>
+										<li>
+											<a class="links-portfolio__link link-portfolio" href="noeyes.artstation.com">
+												<div class="link-portfolio__icon">
+													<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+													<path d="M0 23.63l2.703 4.672c0.552 1.094 1.667 1.781 2.885 1.781h17.943l-3.724-6.453zM32 23.661c0-0.641-0.193-1.245-0.516-1.75l-10.516-18.276c-0.557-1.057-1.656-1.719-2.854-1.719h-5.557l16.24 28.135 2.563-4.432c0.5-0.849 0.641-1.224 0.641-1.958zM17.161 19.047l-7.255-12.568-7.26 12.568z"/>
+													</svg>
+												</div>
+
+												<span class="link-portfolio__title">Artstation</span>
+											</a>
+										</li>
+										<li>
+											<a class="links-portfolio__link link-portfolio" href="mailto:carrascosanchezmanon@gmail.com">
+												<div class="link-portfolio__icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M231.4,44.34s0,.1,0,.15l-58.2,191.94a15.88,15.88,0,0,1-14,11.51q-.69.06-1.38.06a15.86,15.86,0,0,1-14.42-9.15L107,164.15a4,4,0,0,1,.77-4.58l57.92-57.92a8,8,0,0,0-11.31-11.31L96.43,148.26a4,4,0,0,1-4.58.77L17.08,112.64a16,16,0,0,1,2.49-29.8l191.94-58.2.15,0A16,16,0,0,1,231.4,44.34Z"/></svg>
+												</div>
+
+												<span class="link-portfolio__title">Mail</span>
+											</a>
+										</li>
+									</ul>
+								</article>
+							</li>
+
+							
+
+
+
+
+							<!-------------- PORTFOLIO ---------------->
+							<li>
+								<article class="portfolio background mainblock">
+									<div class="portfolio__title title-portfolio">
+										<h3 class="title-portfolio__name">Pablo Gangutia</h3>
+										<div class="title-portfolio__role highlight--light">Game Designer</div>
+									</div>
+									<div class="portfolio__image image-portfolio"><img src="../images/team/pablo.png" alt="" class="image-portfolio__img"></div>
+
+									<ul class="unset portfolio__links links-portfolio">
+										<li>
+											<a class="links-portfolio__link link-portfolio" href="https://www.linkedin.com/in/pablo-gangutia/">
+												<div class="link-portfolio__icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.12a24,24,0,0,0-14.49,16.4C19.08,79.5,16,97.74,16,128s3.08,48.5,5.67,58.48a24,24,0,0,0,14.49,16.41C69,215.56,120.4,216,127.34,216h1.32c6.94,0,58.37-.44,91.18-13.11a24,24,0,0,0,14.49-16.41c2.59-10,5.67-28.22,5.67-58.48S236.92,79.5,234.33,69.52Zm-73.74,65-40,28A8,8,0,0,1,108,156V100a8,8,0,0,1,12.59-6.55l40,28a8,8,0,0,1,0,13.1Z"/></svg>
+												</div>
+
+												<span class="link-portfolio__title">LinkedIn</span>
+											</a>
+										</li>
+										<li>
+											<a class="links-portfolio__link link-portfolio" href="">
+												<div class="link-portfolio__icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M224,104v96a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V104A16,16,0,0,1,48,88H208A16,16,0,0,1,224,104ZM56,72H200a8,8,0,0,0,0-16H56a8,8,0,0,0,0,16ZM72,40H184a8,8,0,0,0,0-16H72a8,8,0,0,0,0,16Z"/></svg>
+												</div>
+
+												<span class="link-portfolio__title">Portfolio</span>
+											</a>
+										</li>
+									</ul>
+								</article>
+							</li>
+
+							
+
+
+
+
+							<!-------------- PORTFOLIO ---------------->
+							<li>
+								<article class="portfolio background mainblock">
+									<div class="portfolio__title title-portfolio">
+										<h3 class="title-portfolio__name">Baptiste Dozin</h3>
+										<div class="title-portfolio__role highlight--light">Composer</div>
+									</div>
+									<div class="portfolio__image image-portfolio"><img src="../images/team/baptiste.png" alt="" class="image-portfolio__img"></div>
+
+									<ul class="unset portfolio__links links-portfolio">
+										<li>
+											<a class="links-portfolio__link link-portfolio" href="">
+												<div class="link-portfolio__icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.12a24,24,0,0,0-14.49,16.4C19.08,79.5,16,97.74,16,128s3.08,48.5,5.67,58.48a24,24,0,0,0,14.49,16.41C69,215.56,120.4,216,127.34,216h1.32c6.94,0,58.37-.44,91.18-13.11a24,24,0,0,0,14.49-16.41c2.59-10,5.67-28.22,5.67-58.48S236.92,79.5,234.33,69.52Zm-73.74,65-40,28A8,8,0,0,1,108,156V100a8,8,0,0,1,12.59-6.55l40,28a8,8,0,0,1,0,13.1Z"/></svg>
+												</div>
+
+												<span class="link-portfolio__title">LinkedIn</span>
+											</a>
+										</li>
+										<li>
+											<a class="links-portfolio__link link-portfolio" href="">
+												<div class="link-portfolio__icon">
+													<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+													<path d="M0 23.63l2.703 4.672c0.552 1.094 1.667 1.781 2.885 1.781h17.943l-3.724-6.453zM32 23.661c0-0.641-0.193-1.245-0.516-1.75l-10.516-18.276c-0.557-1.057-1.656-1.719-2.854-1.719h-5.557l16.24 28.135 2.563-4.432c0.5-0.849 0.641-1.224 0.641-1.958zM17.161 19.047l-7.255-12.568-7.26 12.568z"/>
+													</svg>
+												</div>
+
+												<span class="link-portfolio__title">Artstation</span>
+											</a>
+										</li>
+										<li>
+											<a class="links-portfolio__link link-portfolio" href="mailto:">
+												<div class="link-portfolio__icon">
+													<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M231.4,44.34s0,.1,0,.15l-58.2,191.94a15.88,15.88,0,0,1-14,11.51q-.69.06-1.38.06a15.86,15.86,0,0,1-14.42-9.15L107,164.15a4,4,0,0,1,.77-4.58l57.92-57.92a8,8,0,0,0-11.31-11.31L96.43,148.26a4,4,0,0,1-4.58.77L17.08,112.64a16,16,0,0,1,2.49-29.8l191.94-58.2.15,0A16,16,0,0,1,231.4,44.34Z"/></svg>
+												</div>
+
+												<span class="link-portfolio__title">Mail</span>
+											</a>
+										</li>
+									</ul>
+								</article>
+							</li>
+
+							
+
+
+
+
+						</ul>
+					</article>
+				</div>
+			</div>
+
+
+
+
+			
+			<!----------------------------------- SECTION FOOTER ----------------------------------
+		    -------------------------------------------------------------------------------------->
+			<footer class="section footer-section background box-shadow solid background--dark">
+				<div class="container">
+					<article class="footer text-footer">
+						<div class="footer__title">
+							<h3>contact us</h3>
+						</div>
+						<div class="footer__subtitle thin italic small opacity-80">
+							We'd like to read your reviews
+						</div>
+
+						<nav class="footer__socials socials socials--small">
+							<ul class="unset socials__list list-socials flex-row justify-center align-center">
+								
+								<li>
+									<a href="https://www.instagram.com/ferrets_n_bunnies/" class="list-socials__link roundlink">
+										<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 256 256"><path d="M176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24ZM128,176a48,48,0,1,1,48-48A48.05,48.05,0,0,1,128,176Zm60-96a12,12,0,1,1,12-12A12,12,0,0,1,188,80Zm-28,48a32,32,0,1,1-32-32A32,32,0,0,1,160,128Z"></path></svg>
+										<div class="roundlink__title">
+											<span class="roundlink__innertitle">Instagram</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.youtube.com/@FerretsNBunnies" class="list-socials__link roundlink">
+										<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.12a24,24,0,0,0-14.49,16.4C19.08,79.5,16,97.74,16,128s3.08,48.5,5.67,58.48a24,24,0,0,0,14.49,16.41C69,215.56,120.4,216,127.34,216h1.32c6.94,0,58.37-.44,91.18-13.11a24,24,0,0,0,14.49-16.41c2.59-10,5.67-28.22,5.67-58.48S236.92,79.5,234.33,69.52Zm-73.74,65-40,28A8,8,0,0,1,108,156V100a8,8,0,0,1,12.59-6.55l40,28a8,8,0,0,1,0,13.1Z"/></svg>
+										<div class="roundlink__title">
+											<span class="roundlink__innertitle">Youtube</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="https://ferrets-n-bunnies.itch.io/shards-of-eukria" class="list-socials__link roundlink">
+										<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+											<path d="M4.172 1.787c-1.396 0.828-4.145 3.984-4.172 4.812v1.375c0 1.735 1.625 3.267 3.099 3.267 1.771 0 3.251-1.469 3.251-3.213 0 1.744 1.421 3.213 3.197 3.213 1.771 0 3.151-1.469 3.151-3.213 0 1.744 1.516 3.213 3.287 3.213h0.032c1.776 0 3.291-1.469 3.291-3.213 0 1.744 1.381 3.213 3.152 3.213s3.197-1.469 3.197-3.213c0 1.744 1.475 3.213 3.245 3.213 1.479 0 3.104-1.532 3.104-3.267v-1.375c-0.032-0.828-2.776-3.984-4.177-4.812-4.339-0.156-7.344-0.183-11.823-0.183-4.484 0.005-10.593 0.073-11.828 0.183zM12.677 10.421c-0.183 0.308-0.385 0.568-0.625 0.797v0.005c-0.672 0.651-1.588 1.057-2.599 1.057-1.016 0-1.932-0.407-2.599-1.063-0.245-0.235-0.428-0.489-0.6-0.787-0.167 0.297-0.4 0.552-0.645 0.787-0.672 0.656-1.588 1.063-2.599 1.063 0 0 0 0-0.005 0-0.12 0-0.245-0.036-0.349-0.073-0.14 1.485-0.203 2.901-0.224 3.937v0.005c-0.005 0.527-0.005 0.953-0.011 1.552 0.032 3.115-0.307 10.089 1.376 11.803 2.604 0.604 7.396 0.88 12.197 0.885h0.005c4.807-0.005 9.593-0.281 12.197-0.885 1.683-1.713 1.344-8.688 1.376-11.803-0.005-0.599-0.005-1.025-0.011-1.552v-0.005c-0.021-1.036-0.079-2.452-0.224-3.937-0.099 0.037-0.229 0.073-0.349 0.073 0 0-0.005 0-0.005 0-1.011 0-1.927-0.407-2.599-1.063h0.005c-0.245-0.235-0.479-0.489-0.645-0.787h-0.005c-0.167 0.297-0.355 0.552-0.595 0.787-0.667 0.656-1.583 1.063-2.599 1.063-1.011 0-1.927-0.407-2.599-1.063-0.24-0.229-0.443-0.495-0.615-0.787l-0.011-0.016c-0.172 0.308-0.38 0.573-0.615 0.803-0.672 0.656-1.588 1.063-2.599 1.063 0 0-0.005 0-0.005 0-0.031 0-0.068 0-0.104-0.005-0.036 0.005-0.073 0.005-0.109 0.005 0 0 0 0-0.005 0-1.011 0-1.927-0.407-2.593-1.063-0.24-0.229-0.443-0.495-0.609-0.787l-0.011-0.016zM10.005 13.875c1.057 0.005 1.995 0 3.161 1.271 0.916-0.093 1.875-0.14 2.833-0.14s1.917 0.047 2.833 0.14c1.167-1.271 2.104-1.271 3.161-1.271h0.005c0.5 0 2.5 0 3.891 3.912l1.495 5.369c1.109 3.995-0.355 4.095-2.177 4.095-2.708-0.1-4.208-2.068-4.208-4.037-1.5 0.251-3.251 0.371-5 0.371s-3.5-0.12-4.995-0.371c0 1.969-1.5 3.937-4.208 4.037-1.828-0.005-3.292-0.1-2.183-4.095l1.495-5.369c1.396-3.912 3.396-3.912 3.896-3.912zM16 16.953c-0.005 0-2.849 2.62-3.364 3.547l1.864-0.073v1.625c0 0.079 0.751 0.047 1.5 0.011 0.749 0.036 1.495 0.068 1.495-0.011v-1.625l1.869 0.073c-0.515-0.927-3.364-3.547-3.364-3.547z"/>
+										</svg>
+
+										<div class="roundlink__title">
+											<span class="roundlink__innertitle">Itch.io</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</article>
+				</div>
+			</footer>
+		</div>
+
+	</body>
+
+
+    <script src="./js/mainscript.js"></script>
+
 </html>
