@@ -890,6 +890,12 @@ h1 {
     --vw: 1vw;
 }
 
+@media all and (max-width: 550px) {
+    h1 {
+        --scale: 3;
+    }
+}
+
 h2 {
     --scale: 2.5;
     --vw: 0.8vw;
@@ -1311,9 +1317,9 @@ a .dark:hover, a.dark:hover, .dark a:hover {
   display: grid;
   grid-gap: var(--gap-small);
   grid-template:
-    "title . . ." 1fr
     "title . subtitle ." auto
     / auto var(--gap) 1fr 8vw;
+  align-items: center;
 }
 
 @media all and (max-width: 1200px) {
@@ -1327,7 +1333,6 @@ a .dark:hover, a.dark:hover, .dark a:hover {
 
 .intro__title {
   grid-area: title;
-  align-self: end;
 }
 
 .intro__title .small {
@@ -1336,7 +1341,6 @@ a .dark:hover, a.dark:hover, .dark a:hover {
 
 .intro__subtitle {
   grid-area: subtitle;
-  align-self: end;
 }
 
 
@@ -2112,6 +2116,22 @@ ul.unset.list-comments, .list-comments {
 }
 
 .footer__socials .socials__list {
+}
+
+@media all and (max-width: 700px) {
+    .footer {
+        grid-template:
+            "title" auto
+            "subtitle" auto
+            "." var(--gutter)
+            "socials" auto
+            "text" auto
+            / 1fr;
+    }
+
+    .footer__socials {
+        justify-content: start;
+    }
 }
 
 
