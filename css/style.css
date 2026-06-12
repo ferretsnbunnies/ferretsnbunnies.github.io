@@ -112,7 +112,7 @@ html:not(.theme-light) {
     }
 }
 
-@media all and (max-width: 800px) {
+@media screen, all and (max-width: 800px) {
     :root {
         --border: var(--gap);
         --border2: var(--gap-small);
@@ -156,14 +156,14 @@ html.dark-theme {
     }
 }
 
-@media all and (max-width: 500px) {
+@media screen, all and (max-width: 500px) {
     :root {
         --gap: var(--gap4);
         --gap-small: var(--gap3);
     }
 }
 
-@media all and (min-width: 2200px) {
+@media screen, all and (min-width: 2200px) {
     :root {
         --global-margin: 12vw;
     }
@@ -703,7 +703,7 @@ span.sq, i.sq, b.sq, s.sq {
     justify-content: space-between;
 }
 
-@media all and (max-width: 750px) {
+@media screen, all and (max-width: 750px) {
     .grid > *:not(.grid__fixed) {
         grid-column-start: 1;
         grid-column-end: -1;
@@ -775,7 +775,7 @@ b {
   transition: all .5s ease;
 }
 
-@media all and (max-width: 1200px) {
+@media screen, all and (max-width: 1200px) {
   .link {
     padding: var(--paddh);
     padding-right: calc(2 * var(--paddr));
@@ -890,7 +890,7 @@ h1 {
     --vw: 1vw;
 }
 
-@media all and (max-width: 550px) {
+@media screen, all and (max-width: 550px) {
     h1 {
         --scale: 3;
     }
@@ -1109,7 +1109,7 @@ a .dark:hover, a.dark:hover, .dark a:hover {
     padding: 0;
 }
 
-@media all and (max-width: 1200px) {
+@media screen, all and (max-width: 1200px) {
     .link {
       padding: var(--paddh);
       --paddr: calc(2 * var(--paddw));
@@ -1170,7 +1170,7 @@ a .dark:hover, a.dark:hover, .dark a:hover {
   background: var(--nb0);
 }
 
-@media all and (max-width: 800px) {
+@media screen, all and (max-width: 800px) {
     .mainnav {
         grid-template:
             "logo . title title" auto
@@ -1212,7 +1212,7 @@ a .dark:hover, a.dark:hover, .dark a:hover {
   gap: var(--gap5);
 }
 
-@media all and (max-width: 500px) {
+@media screen, all and (max-width: 500px) {
     .mainnav {
         grid-template:
             "logo links" auto
@@ -1322,7 +1322,7 @@ a .dark:hover, a.dark:hover, .dark a:hover {
   align-items: center;
 }
 
-@media all and (max-width: 1200px) {
+@media screen, all and (max-width: 1200px) {
     .intro {
         grid-template:
         "title" 1fr
@@ -1373,7 +1373,7 @@ a .dark:hover, a.dark:hover, .dark a:hover {
   border-radius: var(--border-radius);
 }
 
-@media all and (max-width: 1500px) {
+@media screen, all and (max-width: 1500px) {
     .introvideo {
         grid-template:
         "video" auto
@@ -1401,7 +1401,7 @@ a .dark:hover, a.dark:hover, .dark a:hover {
     align-self: start;
 }
 
-@media all and (max-width: 1200px) {
+@media screen, all and (max-width: 1200px) {
     .text-introvideo__title h2 {
         align-self: start;
     }
@@ -1431,7 +1431,7 @@ a .dark:hover, a.dark:hover, .dark a:hover {
 
 }
 
-@media all and (max-width: 1000px) {
+@media screen, all and (max-width: 1000px) {
     .list-socials {
         gap: var(--gap-small);
     }
@@ -1476,7 +1476,7 @@ a .dark:hover, a.dark:hover, .dark a:hover {
     }
 }
 
-@media all and (max-width: 600px) {
+@media screen, all and (max-width: 600px) {
     .list-team {
         grid-template-columns: 1fr;
     }
@@ -1495,7 +1495,7 @@ a .dark:hover, a.dark:hover, .dark a:hover {
     --img-height: 300px;
 }
 
-@media all and (max-width: 600px) {
+@media screen, all and (max-width: 600px) {
     .team-member {
         --img-height: 40vh;
     }
@@ -1573,7 +1573,7 @@ ul.unset.list-comments, .list-comments {
     --paddw: calc(0.5 * var(--global-margin-width));
 }
 
-@media all and (max-width: 900px) {
+@media screen, all and (max-width: 900px) {
     ul.unset.list-comments, .list-comments {
         column-count: 1;
     }
@@ -1790,7 +1790,7 @@ ul.unset.list-comments, .list-comments {
     }
 }
 
-@media all and (max-width: 850px) {
+@media screen, all and (max-width: 850px) {
     
     .article-news--video {
         grid-template:
@@ -1841,7 +1841,7 @@ ul.unset.list-comments, .list-comments {
     --percentage: 20%;
 }
 
-@media all and (max-width: 750px) {
+@media screen, all and (max-width: 750px) {
     [class*="photos-news--width"] {
         --percentage: 100%;
     }
@@ -1863,7 +1863,7 @@ ul.unset.list-comments, .list-comments {
     --height: 30vh;
 }
 
-@media all and (max-width: 750px) {
+@media screen, all and (max-width: 750px) {
     [class*="photos-news--height"] {
         --height: auto;
     }
@@ -1916,7 +1916,7 @@ ul.unset.list-comments, .list-comments {
     --paddw: var(--gap-small);
 }
 
-@media all and (max-width: 850px) {
+@media screen, all and (max-width: 850px) {
     .cta__container {
         display: flex;
         flex-flow: column-reverse nowrap;
@@ -1973,7 +1973,7 @@ ul.unset.list-comments, .list-comments {
     margin-bottom: auto;
 }
 
-@media all and (max-width: 850px) {
+@media screen, all and (max-width: 850px) {
 
     .popup-cta__header {
         gap: calc(2 * var(--gap));
@@ -2035,7 +2035,7 @@ ul.unset.list-comments, .list-comments {
     --paddleft2: calc(var(--gap) + var(--paddw));
 }
 
-@media all and (max-width: 700px) {
+@media screen, all and (max-width: 700px) {
     .infos-cta {
         grid-template:
             "calendar" auto
@@ -2059,7 +2059,7 @@ ul.unset.list-comments, .list-comments {
     --cellwidth: 150px;
 }
 
-@media all and (max-width: 500px) {
+@media screen, all and (max-width: 500px) {
     .infos-cta__dates {
         --cellwidth: 100px;
     }
@@ -2118,7 +2118,7 @@ ul.unset.list-comments, .list-comments {
 .footer__socials .socials__list {
 }
 
-@media all and (max-width: 700px) {
+@media screen, all and (max-width: 700px) {
     .footer {
         grid-template:
             "title" auto
@@ -2151,7 +2151,7 @@ ul.unset.list-comments, .list-comments {
     gap: var(--gap);
 }
 
-@media all and (max-width: 1800px) {
+@media screen, all and (max-width: 1800px) {
     .memberslist-portfolios {
     grid-template-columns: repeat(1, 1fr);
     }
@@ -2259,7 +2259,7 @@ ul.unset.list-comments, .list-comments {
     grid-area: title;
 }
 
-@media all and (max-width: 800px) {
+@media screen, all and (max-width: 800px) {
     .memberslist-portfolios {
         gap: calc(2 * var(--gap));
     }
@@ -2297,7 +2297,7 @@ ul.unset.list-comments, .list-comments {
     }
 }
 
-@media all and (max-width: 550px) {
+@media screen, all and (max-width: 550px) {
     .portfolio {
         grid-template:
             "img" auto
