@@ -1546,6 +1546,12 @@ a .dark:hover, a.dark:hover, .dark a:hover {
     filter: grayscale(0%);
 }
 
+@media all and (max-device-width: 800px) {
+    .team-member__img > img {
+        filter: none;
+    }
+}
+
 .team-member__name {
     grid-area: name;
     text-align: center;
