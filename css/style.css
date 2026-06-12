@@ -6,7 +6,7 @@ html:not(.theme-light) {
     --nb01: #FFFFFF05;
     --nb02: #aaa5dc1d;
 
-    --background: #3c596f;
+    --background: #414874;
     --background2: #303341;
     /* --nb0: #3908ff; */
     --nb0: #181a27;
@@ -15,10 +15,10 @@ html:not(.theme-light) {
     --nb3: #89898b;
     --nb4: #535762;
 
-    --color1: #009AB6;
-    --color2: #0F6670;
-    --color3: #737EAA;
-    --color4: #E7795E;
+    --color1: #7180e4;
+    --color2: #c2b6e3;
+    --color3: #5073fe;
+    --color4: #e86e5f;
     --color5: #FFCC00;
 
     --background-body: var(--background);
@@ -1528,11 +1528,23 @@ a .dark:hover, a.dark:hover, .dark a:hover {
     margin: 0;
     padding: 0;
     --scale: 1.5;
+    transition: all .3s ease;
+
+    color: var(--color5);
 }
 
 .team-member__subtitle {
     grid-area: subtitle;
     text-align: center;
+}
+
+.team-member__subtitle .highlight {
+    color: var(--nb1);
+    transition: all .3s ease;
+}
+
+.team-member:hover .team-member__name h3, .team-member:hover .team-member__subtitle .highlight {
+    color: var(--color4);
 }
 
 
@@ -2207,7 +2219,7 @@ ul.unset.list-comments, .list-comments {
 }
 
 .links-portfolio__link:hover {
-    background: var(--color3);
+    background: var(--color4);
 }
 
 .portfolios svg {
