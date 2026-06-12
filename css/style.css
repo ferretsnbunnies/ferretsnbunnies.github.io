@@ -29,7 +29,7 @@ html:not(.theme-light) {
 :root {
     /* ---------- COLORS ---------- */
     --color-highlight: var(--color1);
-    --color-highlight-light: var(--color5);
+    --color-highlight-light: var(--color2);
     --color-highlight2: var(--color4);
 
     --font-size-main: calc(1rem + 0.2vw);
@@ -56,6 +56,7 @@ html:not(.theme-light) {
     --gap5: calc(48 / 16 * 1rem);
     --gap6: calc(80 / 16 * 1rem);
     --gap7: calc(120 / 16 * 1rem);
+    --gap8: calc(150 / 16 * 1rem);
     --gap10: calc(280 / 16 * 1rem);
 
     --gutter: var(--gap2);
@@ -162,7 +163,7 @@ html.dark-theme {
 
 }
 
-@media all and (max-device-width: 750px), (max-width: 750px) {
+@media all and (max-width: 750px) {
     :root {
         --gap: var(--gap5);
         --gap-small: var(--gap4);
@@ -170,16 +171,24 @@ html.dark-theme {
     }
 }
 
-@media all and (max-device-width: 500px), (max-width: 500px) {
+@media all and (max-width: 500px) {
     :root {
         --gap: var(--gap4);
         --gap-small: var(--gap3);
     }
 }
 
-@media all and (min-device-width: 2200px), (max-width: 2200px) {
+@media all and (max-width: 2200px) {
     :root {
         --global-margin: 12vw;
+    }
+}
+
+@media all and (max-device-width: 800px) {
+    :root {
+        --gap: var(--gap7);
+        --gap-small: var(--gap5);
+        --gap-section: clamp(var(--gap3), 4vh, var(--gap10));
     }
 }
 
@@ -1226,11 +1235,11 @@ a .dark:hover, a.dark:hover, .dark a:hover {
   gap: var(--gap5);
 }
 
-@media all and (max-device-width: 500px), (max-width: 500px) {
+@media all and (max-device-width: 500px) {
     .mainnav {
         grid-template:
-            "logo links" auto
-            / auto 1fr;
+            ". logo links" auto
+            / auto 1fr auto;
         gap: var(--gutter);
         padding: var(--gap-mainnav);
         --gap-mainnav: calc(0.5 * var(--gap));
@@ -2258,11 +2267,17 @@ ul.unset.list-comments, .list-comments {
 
 .portfolios svg {
     display: block;
-    width: var(--hq);
-    height: var(--hq);
-    --hq: 20px;
+    width: var(--sq);
+    height: var(--sq);
+    --sq: 20px;
 
     fill: var(--color);
+}
+
+@media all and (max-device-width: 800px) {
+    .portfolios svg {
+        --sq: 8vw;
+    }
 }
 
 .link-portfolio__icon {
@@ -2290,7 +2305,7 @@ ul.unset.list-comments, .list-comments {
     .portfolio__image {
         width: var(--sq);
         height: var(--sq);
-        --sq: 100px;
+        --sq: 15vw;
         position: relative;
         border-radius: 50%;
     }
@@ -2298,6 +2313,7 @@ ul.unset.list-comments, .list-comments {
     .portfolio__title {
         flex-flow: column wrap;
         align-items: flex-start;
+        text-align: center;
     }
 
     .links-portfolio {
@@ -2322,6 +2338,10 @@ ul.unset.list-comments, .list-comments {
             / 1fr;
         justify-items: center;
         padding-top: calc(2 * var(--padding-side));
+    }
+
+    .portfolio__image {
+        --sq: 25vw;
     }
 
     .portfolio__title {
