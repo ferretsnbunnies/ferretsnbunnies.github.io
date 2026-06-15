@@ -851,12 +851,24 @@ b {
     text-align: center;
 }
 
+@media all and (max-device-width: 800px) {
+    .roundlink {
+        --sq: 10rem;
+        --sq-svg: calc(0.5 * var(--sq));
+    }
+
+    .roundlink svg {
+        width: var(--sq-svg);
+        height: var(--sq-svg);
+    }
+}
+
 .roundlink > * {
     margin: auto;
     text-align: center;
 }
 
-.roundlink > img, .roundlink > svg {
+.roundlink > img {
     border-radius: 50%;
 }
 
@@ -1466,6 +1478,12 @@ a .dark:hover, a.dark:hover, .dark a:hover {
     .socials__subtitle {
         width: 100%;
         text-align: center;
+    }
+}
+
+@media all and (max-device-width: 800px) {
+    .socials--small .roundlink {
+        --sq: 8rem;
     }
 }
 
