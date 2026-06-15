@@ -800,9 +800,19 @@ b {
 }
 
 @media all and (max-device-width: 1200px), (max-width: 1200px) {
-  .link {
-    padding: var(--paddh);
-    padding-right: calc(2 * var(--paddr));
+    .link {
+        padding: var(--paddh);
+        padding-right: calc(2 * var(--paddr));
+    }
+    
+    .link > *:first-child {
+        margin-right: var(--gap6);
+    }
+}
+
+@media all and (max-device-width: 800px) {
+    .link {
+        margin: auto;
     }
 }
 
@@ -825,11 +835,20 @@ b {
   transition: all .5s ease;
   position: absolute;
   right: var(--paddr);
+    font-size: 2rem;
+    line-height: 0.8;
 }
 
 .link:hover::after {
   padding-left: calc(2 * var(--paddr));
   right: calc(0.5 * var(--paddr));
+}
+
+@media all and (max-device-width: 800px) {
+    .link::after {
+        font-size: 4rem;
+        line-height: 1;
+    }
 }
 
 .roundlink {
