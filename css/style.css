@@ -16,7 +16,7 @@ html:not(.theme-light) {
     --nb4: #535762;
 
     --color1: #7180e4;
-    --color2: #c2b6e3;
+    --color2: #9d86dc;
     --color3: #5073fe;
     --color4: #e86e5f;
     --color5: #FFCC00;
@@ -1527,7 +1527,7 @@ a .dark:hover, a.dark:hover, .dark a:hover {
 .team-member__img {
     grid-area: img;
     width: 100%;
-    height: var(--img-height);
+    /*height: var(--img-height);*/
     border-radius: var(--border-radius-small);
     overflow: hidden;
     background: white;
